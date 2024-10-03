@@ -1,0 +1,254 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+
+.wrapper {
+    width: 100vw;
+    min-height: 100vh; /* Allow the wrapper to grow */
+    position: relative;
+    background-image: linear-gradient(to top, #384c8f 0%, #E8E4C9 100%);
+    overflow: auto; 
+}
+
+/* Wave effect adjustment */
+.wave {
+    width: 900px; /* Use 100% to prevent overflow */
+    max-width: 100vw; /* Prevent overflow beyond viewport width */
+    height: 900px;
+    position: absolute;
+    top: -55vh; /* Adjust positioning for better coverage */
+    left: 0; /* Align to the left */
+    border-radius: 40%; /* Keep the wave shape */
+    background: rgba(255, 255, 255, 0.75);
+    z-index: -1; /* Ensure it's behind other content */
+    animation: wave 15s infinite linear;
+}
+
+/* Keyframe animation for the wave effect */
+@keyframes wave {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+
+
+.nav ul {
+    display: flex;
+    z-index: 1;
+    background: transparent;
+}
+
+.nav ul li {
+    padding: 0px;
+    margin-right: 20px;
+    overflow: hidden;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    font-size: 30px;
+    width: 30%;
+    transition: font-size 0.3s ease-out;
+    justify-content: space-between;
+    color: #0b6e9c;
+    background: transparent;
+}
+
+.nav ul li:hover {
+    font-size: 40px;
+}
+
+.main {
+    display: flex; /* Flexbox layout to align image and text+button side by side */
+    align-items: center;
+    gap: 20px; /* Space between image and text+button container */
+    font-family: "Oswald", sans-serif;
+}
+
+
+.text-and-button {
+    display: block; /* Makes the button go below the text */
+    margin-top: 10px; /* Space above the button, if needed */
+}
+
+.missText {
+    font-size: 30px; /* Text size */
+    margin: 0; /* No margin */
+    text-align: left; /* Left align text */
+}
+
+.LinkedinBtn {
+    width: 45px; /* Button width */
+    height: 45px; /* Button height */
+    display: flex; /* Flex container for SVG */
+    align-items: center; /* Center SVG vertically */
+    justify-content: center; /* Center SVG horizontally */
+    border: none; /* No border */
+    background-color: transparent; /* Transparent background */
+    position: relative; /* Allows absolute positioning of children */
+    border-radius: 7px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s; /* Smooth transitions */
+}
+
+.LinkedinBtn .svgContainer {
+    width: 100%; /* Full width of the button */
+    height: 100%; /* Full height of the button */
+    display: flex; /* Flex container */
+    align-items: center; /* Center SVG vertically */
+    justify-content: center; /* Center SVG horizontally */
+    background-color: transparent; /* Transparent background */
+    backdrop-filter: blur(4px); /* Background blur */
+    letter-spacing: 1px; /* Letter spacing */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s; /* Smooth transitions */
+    border: 1px solid rgba(156, 156, 156, 0.466); /* Border styling */
+}
+
+.LinkedinBtn .BG {
+    position: absolute; /* Absolute positioning */
+    content: ""; /* Necessary for positioning */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: #0165e1; /* Background color */
+    z-index: -1; /* Behind other elements */
+    border-radius: 9px; /* Rounded corners */
+    pointer-events: none; /* Ignore pointer events */
+    transition: all 0.3s; /* Smooth transitions */
+}
+
+.LinkedinBtn:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow on hover */
+}
+
+.LinkedinBtn:hover .BG {
+    transform: rotate(35deg); /* Rotate background on hover */
+    transform-origin: bottom; /* Set rotation origin */
+}
+
+.LinkedinBtn:hover .svgContainer {
+    background-color: rgba(156, 156, 156, 0.466); /* Change background on hover */
+}
+
+
+.me {
+    text-decoration: none;
+    color: inherit;
+    background-color: #0166e16b; /* Transparent white */
+    padding: 10px 15px; /* Adjust padding to make the nav bar short */
+    border-radius: 5px; /* Optional: to make it look cleaner with rounded corners */
+    display: inline-block; /* Ensures it's treated as an inline element */
+    position: fixed; /* Fixes the position on the screen */
+    left: 0; /* Sticks to the left side of the window */
+    top: 0; /* Aligns it to the top */
+}
+
+.Main {
+    display: flex; /* Flexbox layout to align image and text+button side by side */
+    align-items: center;
+    gap: 20px; /* Space between image and text+button container */
+    font-family: "Oswald", sans-serif;
+}
+
+.Main {
+    display: flex; /* Flexbox layout to align image and text+button side by side */
+    align-items: center;
+    gap: 20px; /* Space between image and text+button container */
+    font-family: "Oswald", sans-serif;
+}
+
+img, Img {
+    height: auto;
+    clip-path: ellipse(45% 45% at 45% 45%);
+    margin-left: 2%;
+    margin-top: 5.5%;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusts spacing between the text and the button */
+}
+
+.LinkedButton {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.LinkedButton .SVVcontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.LinkedButton .EB {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #0165e1;
+    z-index: -1;
+    border-radius: 9px;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.LinkedButton:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.LinkedButton:hover .SVVcontainer {
+    background-color: rgba(156, 156, 156, 0.466);
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(0, 0);
+    border-radius: 10px;
+    background-image: linear-gradient(to top, #384c8f 0%, #E8E4C9 100%);
+}
+
+body {
+    background: #333;
+    overflow-y: auto;
+}
+
+
+.Text {
+    font-size: 30px;
+    margin: 0; /* No margin needed */
+    text-align: left;
+}
